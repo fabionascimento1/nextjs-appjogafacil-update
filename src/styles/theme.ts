@@ -4,38 +4,39 @@ export default {
     gutter: '3.2rem' // 32px
   },
   border: {
-    radius: '0.6rem'
+    radius: '0.4rem'
   },
   font: {
     family:
-      "Mukta Mahee, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    bold: 600,
+      "'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    bold: 800,
+    semi: 600,
+    normal: 400,
+    light: 200,
     sizes: {
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
       xlarge: '2.2rem',
-      xxlarge: '2.8rem'
+      xxlarge: '2.8rem',
+      huge: '4.5rem'
     }
   },
   colors: {
-    primary: '#282828',
-    primaryHover: '#605D5D',
-    secondary: '#FAFAFA',
-    tertiary: '#0066CC',
-    mainBg: '#FFFFFF',
+    primary: '#1AC79D',
+    secondary: '#2FB8FF',
+    tertiary: '#51FFFF',
+    mainBg: '#2F37F7',
     boxBg: '#C8E3FF',
     border: '#eee',
-    texts: '#333d4f',
-    white: '#FAFAFA',
-    black: '#16193A',
-    lightGray: '#F2F0F3',
-    gray: '#E9E5EA',
-    darkGray: '#B8B6B9',
-    formText: '#585858',
-    logoColor: '#333',
-    borderInput: '#D6D6D6'
+    formLabel: '#585858',
+    white: '#EDEBF5',
+    black: '#0A0D27',
+    lightGray: '#CECECE',
+    gray: '#B5B5B5',
+    darkGray: '#767676',
+    red: '#FF4F4F'
   },
   spacings: {
     xxsmall: '0.8rem',
@@ -59,5 +60,9 @@ export default {
     tablet: '750',
     desktop: '1000',
     hd: '1300'
+  },
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
   }
-}
+} as const
