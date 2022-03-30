@@ -7,7 +7,9 @@ export default {
     radius: '0.4rem'
   },
   font: {
-    family:
+    familySaira:
+      "'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+    familyPoppins:
       "'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     bold: 800,
     semi: 600,
