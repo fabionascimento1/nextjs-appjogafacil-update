@@ -40,6 +40,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head />
+        <title>✪ App Joga Fácil</title>
         <body>
           <Main />
           <NextScript />
