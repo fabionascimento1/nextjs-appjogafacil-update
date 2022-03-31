@@ -8,7 +8,7 @@ const Banner = ({ title, description, image }: BannerProps) => (
     <S.Content data-testid="content">
       <S.Left>
         <S.Title>{title}</S.Title>
-        <S.Description>{description}</S.Description>
+        <S.Description dangerouslySetInnerHTML={{ __html: description }} />
       </S.Left>
       <S.Image>
         <Image src={image} alt={title} width={345} height={319} />

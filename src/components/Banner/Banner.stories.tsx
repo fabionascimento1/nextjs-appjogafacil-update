@@ -21,6 +21,6 @@ export const Default: Story<BannerProps> = (args) => (
 Default.args = {
   title: 'Facilitar a locação de horários de quadras esportivas',
   description:
-    'Mudou de cidade? Encontre polos esportivos, times e peladas perto de você e saia para o abraço.',
+    'Mudou de cidade? Encontre polos esportivos, times e peladas perto de você e <strong>saia para o abraço</strong>.',
   image: '/img/player-1.svg'
 }
