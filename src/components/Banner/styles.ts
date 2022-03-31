@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   width: 674px;
-  margin: 0 auto;
+  margin: 20% auto 0;
 
   ${media.lessThan('medium')`
     width: 90%;
