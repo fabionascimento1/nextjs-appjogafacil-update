@@ -19,6 +19,8 @@ export const Wrapper = styled.button<ButtonProps>`
     &:disabled {
       background: ${theme.colors.lightGray};
       color: ${theme.colors.darkGray};
+      opacity: 0.7;
+      cursor: not-allowed;
     }
 
     ${!!fullWidth && wrapperProps.fullWith}
