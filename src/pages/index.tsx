@@ -1,8 +1,14 @@
-import Banner from 'components/Banner'
-import Header from 'components/Header'
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
 import Home from 'templates/Home'
+
+import Signin from 'pages/signin'
+import Signup from 'pages/signup'
+
+import Banner from 'components/Banner'
+import Header from 'components/Header'
+import Modal from 'components/Modal'
 
 const props = {
   title: 'Facilitar a locação de horários de quadras esportivas',
@@ -12,11 +18,28 @@ const props = {
 }
 
 const Index: NextPage = () => {
+  const router = useRouter()
+  const { modal } = router.query
+
   return (
-    <Home>
-      <Header />
-      <Banner {...props} />
-    </Home>
+    <>
+      {modal === 'signin' && (
+        <Modal>
+          <Signin />
+        </Modal>
+      )}
+
+      {modal === 'signup' && (
+        <Modal>
+          <Signup />
+        </Modal>
+      )}
+
+      <Home>
+        <Header />
+        <Banner {...props} />
+      </Home>
+    </>
   )
 }
 
