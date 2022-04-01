@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import * as HeadingStyles from 'components/Heading/styles'
+
 export const Wrapper = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 10rem 2rem;
 
   ${media.lessThan('medium')`
     flex-direction: column;
@@ -28,4 +30,7 @@ export const FormWrapper = styled.div`
     margin: 0 auto;
     padding-left: 0;
   `}
+  ${HeadingStyles.Wrapper} {
+    margin-bottom: 2.8rem;
+  }
 `
