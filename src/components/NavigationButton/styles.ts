@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   img {
@@ -31,18 +32,21 @@ export const Modal = styled.div<ModalProps>`
 export const Content = styled.div`
   ${({ theme }) => css`
     position: relative;
-    max-width: 960px;
+    max-width: 96rem;
     width: 100%;
-    margin: 148px auto 0;
-    background: ${theme.colors.black};
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px,
-      rgba(255, 255, 255, 0.3) 0px 0px 0px 0.5px inset;
-    backdrop-filter: blur(40px);
+    margin: 14.8rem auto 0;
+    backdrop-filter: blur(7px);
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 50px 100px,
+      rgba(255, 255, 255, 0) 0px 0.5px 0px 0.5px inset;
     border-radius: 20px;
 
-    & > ${NonOpacity} {
-      opacity: 1;
-    }
+    ${media.lessThan('large')`
+      max-width: 95%;
+    `}
+
+    ${media.lessThan('medium')`
+      max-width: 95%;
+    `}
   `}
 `
 
@@ -51,5 +55,3 @@ export const ButtonWrapper = styled.div`
   top: -12px;
   right: -12px;
 `
-
-export const NonOpacity = styled.div``

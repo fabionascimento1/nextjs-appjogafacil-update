@@ -29,9 +29,8 @@ const NavigationButton = () => {
               data-testid="closeModal"
             />
           </S.ButtonWrapper>
-          <S.NonOpacity>
-            <SignIn />
-          </S.NonOpacity>
+
+          <SignIn />
         </S.Content>
       </S.Modal>
     </S.Wrapper>
