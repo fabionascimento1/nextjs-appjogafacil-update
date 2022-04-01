@@ -15,23 +15,21 @@ describe('<Form />', () => {
     expect(container.parentElement).toMatchInlineSnapshot(`
       .c0 {
         font-size: 1.4rem;
-        color: #16193A;
+        color: #0A0D27;
         text-align: center;
       }
 
       .c0 a {
-        color: #6dfdfc;
+        color: #2FB8FF;
         -webkit-text-decoration: none;
         text-decoration: none;
-        border-bottom: 0.1rem solid #4000f3;
-        color: #4000f3;
+        color: #2FB8FF;
         -webkit-transition: color,border,0.1s ease-in-out;
         transition: color,border,0.1s ease-in-out;
       }
 
       .c0 a:hover {
-        color: #3300c0;
-        border-bottom: 0.1rem solid #3300c0;
+        color: #00a5fb;
       }
 
       <body>
