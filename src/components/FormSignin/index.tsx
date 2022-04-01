@@ -10,13 +10,13 @@ const FormSignin = () => (
     <form>
       <Input
         type="text"
-        placeholder="Digite seu nome"
+        placeholder="Digite seu email"
         icon="/img/icon_mail.svg"
       />
 
       <Input
         type="password"
-        placeholder="Digite seu Email"
+        placeholder="Digite sua senha"
         icon="/img/icon_pass.svg"
       />
 
