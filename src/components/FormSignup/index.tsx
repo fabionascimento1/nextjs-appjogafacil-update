@@ -1,13 +1,34 @@
+import React from 'react'
+import Link from 'next/link'
+
+import * as S from './styles'
+
 import Button from 'components/Button'
 import Input from 'components/Input'
 import { FormWrapper, FormLink } from 'components/Form'
-import React from 'react'
-import Link from 'next/link'
 import { Divider } from 'components/Divider'
+import Radio from 'components/Radio'
 
 const FormSignin = () => (
   <FormWrapper>
     <form>
+      <S.WrapperRadio>
+        <Radio
+          label="Jogador"
+          labelFor="Jogador"
+          id="Jogador"
+          name="type"
+          value="Jogador"
+          defaultChecked
+        />
+        <Radio
+          label="Centro Esportivo"
+          labelFor="CentroEsportivo"
+          id="CentroEsportivo"
+          name="type"
+          value="CentroEsportivo"
+        />
+      </S.WrapperRadio>
       <Input
         type="text"
         placeholder="Digite seu nome"
