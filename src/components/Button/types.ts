@@ -12,3 +12,5 @@ export type ButtonProps = {
   disabled?: boolean
   as?: React.ElementType
 } & ButtonTypes
+
+export type WrapperButtonProps = Pick<ButtonProps, 'size' | 'fullWidth'>

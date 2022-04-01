@@ -1,26 +1,33 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import * as S from './styles'
-import { ButtonProps } from './types'
+import { ButtonProps, WrapperButtonProps } from './types'
 
-const Button = ({
-  children,
-  background = 'gradient',
-  fullWidth,
-  size = 'medium',
-  textColor = 'black',
-  disabled = false,
-  ...props
-}: ButtonProps) => (
+const Button: React.ForwardRefRenderFunction<
+  WrapperButtonProps,
+  ButtonProps
+> = (
+  {
+    children,
+    background = 'gradient',
+    fullWidth,
+    size = 'medium',
+    textColor = 'black',
+    disabled = false,
+    ...props
+  },
+  ref
+) => (
   <S.Wrapper
     textColor={textColor}
     size={size}
     fullWidth={fullWidth}
     background={background}
     disabled={disabled}
+    ref={ref}
     {...props}
   >
     {children}
   </S.Wrapper>
 )
 
-export default Button
+export default forwardRef(Button)
