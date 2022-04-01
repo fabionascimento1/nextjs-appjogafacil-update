@@ -9,10 +9,9 @@ const NavigationButton = () => {
     router.push('/?modal=signin')
   }
   return (
-    <S.Wrapper>
+    <S.Wrapper onClick={() => handle()}>
       <Image
         role="img"
-        onClick={() => handle()}
         src="/img/account.svg"
         title="open sign in"
         width={24}
