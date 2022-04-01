@@ -9,5 +9,6 @@ export type ButtonProps = {
   textColor?: 'black' | 'secondary' | 'gray'
   background?: 'black' | 'gradient' | 'gray'
   fullWidth?: boolean
+  disabled?: boolean
   as?: React.ElementType
 } & ButtonTypes

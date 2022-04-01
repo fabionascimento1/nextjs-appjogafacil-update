@@ -8,6 +8,7 @@ const Button = ({
   fullWidth,
   size = 'medium',
   textColor = 'black',
+  disabled = false,
   ...props
 }: ButtonProps) => (
   <S.Wrapper
@@ -15,6 +16,7 @@ const Button = ({
     size={size}
     fullWidth={fullWidth}
     background={background}
+    disabled={disabled}
     {...props}
   >
     {children}

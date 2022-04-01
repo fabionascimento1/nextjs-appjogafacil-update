@@ -16,6 +16,11 @@ export const Wrapper = styled.button<ButtonProps>`
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.large};
 
+    &:disabled {
+      background: ${theme.colors.lightGray};
+      color: ${theme.colors.darkGray};
+    }
+
     ${!!fullWidth && wrapperProps.fullWith}
   `}
 `
