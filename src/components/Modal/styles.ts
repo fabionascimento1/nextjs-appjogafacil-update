@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
@@ -22,7 +22,7 @@ export const Content = styled.div`
     position: relative;
     max-width: 96rem;
     width: 100%;
-    margin: 14.8rem auto 0;
+    margin: 8% auto 0;
     backdrop-filter: blur(7px);
     box-shadow: rgba(0, 0, 0, 0.7) 0px 50px 100px,
       rgba(255, 255, 255, 0) 0px 0.5px 0px 0.5px inset;
@@ -30,13 +30,35 @@ export const Content = styled.div`
 
     ${media.lessThan('large')`
       max-width: 95%;
+      margin: 10% auto 0;
     `}
 
     ${media.lessThan('medium')`
       max-width: 95%;
+      margin: 12% auto 0;
     `}
+
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-name: ${ContentAnimation};
   `}
 `
+const ContentAnimation = keyframes`
+  0% {
+    transform: rotateZ(-45deg);
+    max-width: 5rem;
+    height: 5rem;
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+    
+  }
+`
+
 export const Cover = styled.div`
   ${media.lessThan('medium')`
     order: 2;
@@ -58,8 +80,31 @@ export const FormWrapper = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
-  position: absolute;
-  top: -13px;
-  right: -13px;
-  cursor: pointer;
+  ${({ theme }) => css`
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    cursor: pointer;
+
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-name: ${ButtonAnimation};
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  `}
+`
+
+const ButtonAnimation = keyframes`
+  0% {
+    transform: rotateZ(-180deg);
+  }
+
+  100% {
+    transform: rotateZ(0deg);
+  }
 `
