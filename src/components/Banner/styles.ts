@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   width: 674px;
-  margin: 20% auto 0;
+  margin: 10% auto 0;
 
   ${media.lessThan('medium')`
     width: 90%;
@@ -22,7 +22,8 @@ export const Left = styled.div``
 
 export const Image = styled.div`
   position: relative;
-  margin-left: -100px;
+  margin-left: -10rem;
+  margin-top: 3rem;
   width: 100%;
 
   ${media.lessThan('medium')`
