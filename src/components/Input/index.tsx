@@ -16,7 +16,7 @@ const Input = ({
     <S.InputWrapper>
       {!!icon && (
         <S.Icon>
-          <Image data-testid="icon" src={icon} width={24} height={24} />
+          <Image data-testid="icon" src={icon} width={18} height={18} />
         </S.Icon>
       )}
       <S.Input
@@ -33,8 +33,8 @@ const Input = ({
             title="Mostrar senha"
             role="img"
             src="/img/eye.svg"
-            width={24}
-            height={24}
+            width={16}
+            height={16}
           />
         </S.Eye>
       )}
