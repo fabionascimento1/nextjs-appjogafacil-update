@@ -48,14 +48,13 @@ export const Content = styled.div`
 `
 const ContentAnimation = keyframes`
   0% {
-    transform: rotateZ(-45deg);
-    max-width: 5rem;
-    height: 5rem;
+    opacity: 0;
+    transform: scale(0.6);
   }
 
   100% {
-    transform: rotateZ(0deg);
-    
+    opacity: 1;
+    transform: scale(1);
   }
 `
 

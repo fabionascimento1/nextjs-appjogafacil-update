@@ -28,7 +28,14 @@ export const Eye = styled.div`
   margin-right: 15px;
 `
 
-export const Error = styled.div``
+export const Error = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.red};
+    font-weight: ${theme.font.semi};
+    font-size: ${theme.font.sizes.xsmall};
+    margin: 0.5rem 0 0 2rem;
+  `}
+`
 
 export const Input = styled.input<IconProps>`
   ${({ theme }) => css`
@@ -55,5 +62,6 @@ export const Input = styled.input<IconProps>`
     }
   `}
 `
+type WrapperProps = { error?: boolean }
 
-export const Wrapper = styled.div``
+export const Wrapper = styled.div<WrapperProps>``

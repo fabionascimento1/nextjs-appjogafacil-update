@@ -7,4 +7,5 @@ export type InputProps = {
   togglePassword?: boolean
   disabled?: boolean
   error?: string
+  onInputChange?: (value: string) => void
 } & InputHTMLAttributes<HTMLInputElement>
