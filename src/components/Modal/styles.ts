@@ -16,6 +16,17 @@ export const Wrapper = styled.div`
     opacity: 1;
   `}
 `
+const ContentAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
 
 export const Content = styled.div`
   ${({ theme }) => css`
@@ -45,17 +56,6 @@ export const Content = styled.div`
     animation-direction: normal;
     animation-name: ${ContentAnimation};
   `}
-`
-const ContentAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
 `
 
 export const Cover = styled.div`
@@ -106,4 +106,32 @@ const ButtonAnimation = keyframes`
   100% {
     transform: rotateZ(0deg);
   }
+`
+const KeyContentFadeOut = keyframes`
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+`
+const wrapper = {
+  fadeOut: () => css`
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-name: ${KeyContentFadeOut};
+  `
+}
+type fadeOutProps = { fadeOut?: boolean }
+
+export const ContentFadeOut = styled.div<fadeOutProps>`
+  ${({ fadeOut }) => css`
+    ${fadeOut && wrapper.fadeOut}
+  `}
 `
